@@ -1,0 +1,246 @@
+---
+---
+<section class="hero">
+  <nav class="nav">
+    <span class="logo">L'<em>Arte</em></span>
+    <a href="https://wa.me/593987737600" target="_blank" class="nav-cta">Contáctanos</a>
+  </nav>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-tag">Quito, Ecuador</p>
+      <h1>El arte empieza<br/><em>con las herramientas<br/>correctas</em></h1>
+      <p class="hero-sub">Caballetes, lienzos y materiales de arte de calidad. Para artistas que se toman en serio su pasión.</p>
+      <a href="https://wa.me/593987737600?text=Hola!%20Quiero%20info%20sobre%20sus%20productos" target="_blank" class="btn-primary">
+        Ver catálogo por WhatsApp
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.558 4.14 1.535 5.878L.057 23.269a.75.75 0 0 0 .916.916l5.36-1.476A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.722 9.722 0 0 1-4.964-1.357l-.354-.211-3.681 1.013 1.017-3.718-.229-.371A9.722 9.722 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+      </a>
+    </div>
+
+    <div class="hero-visual">
+      <!-- Reemplaza este div con: <img src="/images/hero.jpg" alt="Caballete L'Arte" /> -->
+      <div class="img-placeholder hero-img">
+        <span><img src="/images/hero.jpg" alt="Caballete L'Arte" /></span>
+      </div>
+      <div class="badge">
+        <strong>+500</strong>
+        <span>artistas confían<br/>en L'Arte</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<style>
+.hero {
+  min-height: 100vh;
+  background: var(--tierra);
+  color: var(--crema);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 70% 50%, rgba(196,154,108,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 10% 80%, rgba(212,136,74,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: var(--crema);
+}
+.logo em {
+  color: var(--madera);
+  font-style: italic;
+}
+
+.nav-cta {
+  border: 1px solid rgba(196,154,108,0.4);
+  color: var(--madera);
+  padding: 0.5rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+.nav-cta:hover {
+  background: var(--madera);
+  color: var(--tierra);
+}
+
+/* HERO INNER */
+.hero-inner {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 2rem 4rem 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--madera);
+  margin-bottom: 1.2rem;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 900;
+  color: var(--crema);
+  margin-bottom: 1.5rem;
+}
+h1 em {
+  color: var(--madera);
+  font-style: italic;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: rgba(245,240,232,0.65);
+  max-width: 420px;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--acento);
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(212,136,74,0.35);
+}
+.btn-primary:hover {
+  background: var(--cafe-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(212,136,74,0.4);
+}
+
+/* HERO VISUAL */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.img-placeholder {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4/5;
+  background: rgba(196,154,108,0.12);
+  border: 1px dashed rgba(196,154,108,0.3);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba(196,154,108,0.6);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.badge {
+  position: absolute;
+  bottom: 2rem;
+  left: -1rem;
+  background: var(--cafe);
+  border-radius: 1rem;
+  padding: 1rem 1.4rem;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+.badge strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--madera);
+}
+.badge span {
+  font-size: 0.75rem;
+  color: rgba(245,240,232,0.7);
+  line-height: 1.4;
+}
+
+/* SCROLL HINT */
+.scroll-hint {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 4rem;
+  position: relative;
+  z-index: 2;
+}
+.scroll-hint span {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(196,154,108,0.5);
+}
+.scroll-line {
+  width: 60px;
+  height: 1px;
+  background: rgba(196,154,108,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.scroll-line::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: var(--madera);
+  animation: slide 2s ease-in-out infinite;
+}
+@keyframes slide { to { left: 100%; } }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav { padding: 1.4rem 1.5rem; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1.5rem 3rem;
+    gap: 2rem;
+  }
+  .hero-visual { order: -1; }
+  .hero-img { aspect-ratio: 16/9; max-width: 100%; }
+  .badge { left: 0.5rem; bottom: 1rem; }
+  .scroll-hint { padding: 1rem 1.5rem; }
+}
+</style>

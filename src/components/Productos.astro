@@ -1,0 +1,184 @@
+---
+const productos = [
+  {
+    nombre: "Caballete Trípode Lacado",
+    desc: "Madera de pino lacada, altura ajustable hasta 1,50m. Ideal para taller o estudio.",
+    tag: "Más vendido",
+    imagen: "/images/CaballetesTripodeLacado.jpg" // <-- Agregamos la ruta
+  },
+  {
+    nombre: "Caballete Trípode Pino",
+    desc: "Madera de pino natural, altura ajustable hasta 1,70m. Resistente y elegante.",
+    tag: "Nuevo",
+    imagen: "/images/tripodepino.jpg" // <-- Agregamos la ruta
+  },
+  {
+    nombre: "Maniquí de Madera",
+    desc: "Articulado de madera, perfecto para practicar proporciones y poses del cuerpo humano.",
+    tag: "",
+    imagen: "/images/maniqui.jpg" // <-- Agregamos la ruta
+  },
+  {
+    nombre: "Set Completo",
+    desc: "Caballete + lienzo + pinturas + pinceles. Todo lo que necesitas para empezar.",
+    tag: "Oferta",
+    imagen: "/images/setcompleto.jpg" // <-- Agregamos la ruta
+  },
+];
+---
+
+<section class="productos" id="productos">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">Lo que ofrecemos</p>
+      <h2>Nuestros <em>productos</em></h2>
+      <p class="section-sub">Herramientas de calidad para que el único límite sea tu imaginación.</p>
+    </div>
+
+    <div class="grid">
+      {productos.map((p) => (
+        <div class="card">
+          <img src={p.imagen} alt={p.nombre} class="card-img" />
+          
+          <div class="card-body">
+            {p.tag && <span class="tag">{p.tag}</span>}
+            <h3>{p.nombre}</h3>
+            <p>{p.desc}</p>
+            <a
+              href={`https://wa.me/593987737600?text=Hola! Me interesa el ${p.nombre}`}
+              target="_blank"
+              class="card-btn"
+            >
+              Consultar precio →
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+.productos {
+  background: var(--crema);
+  padding: 6rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-tag {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--acento);
+  margin-bottom: 0.8rem;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--tierra);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+h2 em {
+  color: var(--cafe-light);
+  font-style: italic;
+}
+
+.section-sub {
+  color: var(--gris);
+  font-size: 1rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--blanco);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid var(--crema-dark);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(107,76,42,0.12);
+}
+
+.card-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.img-placeholder {
+  background: var(--crema-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--acento);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.8rem;
+}
+
+.card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--tierra);
+  margin-bottom: 0.5rem;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  color: var(--gris);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.card-btn {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--cafe);
+  border-bottom: 1px solid var(--madera);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+.card-btn:hover { color: var(--acento); }
+
+@media (max-width: 768px) {
+  .container { padding: 0 1.5rem; }
+  .productos { padding: 4rem 0; }
+}
+</style>
