@@ -18,7 +18,6 @@
     </div>
 
     <div class="hero-visual">
-      <!-- Reemplaza este div con: <img src="/images/hero.jpg" alt="Caballete L'Arte" /> -->
       <div class="img-placeholder hero-img">
         <span><img src="/images/hero.jpg" alt="Caballete L'Arte" /></span>
       </div>
@@ -36,211 +35,42 @@
 </section>
 
 <style>
-.hero {
-  min-height: 100vh;
-  background: var(--tierra);
-  color: var(--crema);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 60% 50% at 70% 50%, rgba(196,154,108,0.18) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 10% 80%, rgba(212,136,74,0.12) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-/* NAV */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.8rem 4rem;
-  position: relative;
-  z-index: 2;
-}
-
-.logo {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 900;
-  letter-spacing: 0.02em;
-  color: var(--crema);
-}
-.logo em {
-  color: var(--madera);
-  font-style: italic;
-}
-
-.nav-cta {
-  border: 1px solid rgba(196,154,108,0.4);
-  color: var(--madera);
-  padding: 0.5rem 1.4rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  transition: all 0.3s ease;
-}
-.nav-cta:hover {
-  background: var(--madera);
-  color: var(--tierra);
-}
-
-/* HERO INNER */
-.hero-inner {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  padding: 2rem 4rem 4rem;
-  position: relative;
-  z-index: 2;
-}
-
-.hero-tag {
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--madera);
-  margin-bottom: 1.2rem;
-}
-
-h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  line-height: 1.1;
-  font-weight: 900;
-  color: var(--crema);
-  margin-bottom: 1.5rem;
-}
-h1 em {
-  color: var(--madera);
-  font-style: italic;
-}
-
-.hero-sub {
-  font-size: 1rem;
-  color: rgba(245,240,232,0.65);
-  max-width: 420px;
-  margin-bottom: 2.5rem;
-  line-height: 1.7;
-}
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--acento);
-  color: white;
-  padding: 0.9rem 2rem;
-  border-radius: 999px;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(212,136,74,0.35);
-}
-.btn-primary:hover {
-  background: var(--cafe-light);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(212,136,74,0.4);
-}
-
-/* HERO VISUAL */
-.hero-visual {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.img-placeholder {
-  width: 100%;
-  max-width: 500px;
-  aspect-ratio: 4/5;
-  background: rgba(196,154,108,0.12);
-  border: 1px dashed rgba(196,154,108,0.3);
-  border-radius: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: rgba(196,154,108,0.6);
-  font-size: 0.9rem;
-  line-height: 1.8;
-}
-
-.badge {
-  position: absolute;
-  bottom: 2rem;
-  left: -1rem;
-  background: var(--cafe);
-  border-radius: 1rem;
-  padding: 1rem 1.4rem;
-  text-align: center;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-}
-.badge strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  color: var(--madera);
-}
-.badge span {
-  font-size: 0.75rem;
-  color: rgba(245,240,232,0.7);
-  line-height: 1.4;
-}
-
-/* SCROLL HINT */
-.scroll-hint {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem 4rem;
-  position: relative;
-  z-index: 2;
-}
-.scroll-hint span {
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(196,154,108,0.5);
-}
-.scroll-line {
-  width: 60px;
-  height: 1px;
-  background: rgba(196,154,108,0.3);
-  position: relative;
-  overflow: hidden;
-}
-.scroll-line::after {
-  content: '';
-  position: absolute;
-  top: 0; left: -100%;
-  width: 100%; height: 100%;
-  background: var(--madera);
-  animation: slide 2s ease-in-out infinite;
-}
+.hero { min-height: 100vh; background: var(--tierra); color: var(--crema); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 70% 50%, rgba(196,154,108,0.18) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 10% 80%, rgba(212,136,74,0.12) 0%, transparent 60%); pointer-events: none; }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 1.8rem 4rem; position: relative; z-index: 2; }
+.logo { font-family: var(--font-display); font-size: 1.6rem; font-weight: 900; letter-spacing: 0.02em; color: var(--crema); }
+.logo em { color: var(--madera); font-style: italic; }
+.nav-cta { border: 1px solid rgba(196,154,108,0.4); color: var(--madera); padding: 0.5rem 1.4rem; border-radius: 999px; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; transition: all 0.3s ease; }
+.nav-cta:hover { background: var(--madera); color: var(--tierra); }
+.hero-inner { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; padding: 2rem 4rem 4rem; position: relative; z-index: 2; }
+.hero-tag { font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--madera); margin-bottom: 1.2rem; }
+h1 { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.1; font-weight: 900; color: var(--crema); margin-bottom: 1.5rem; }
+h1 em { color: var(--madera); font-style: italic; }
+.hero-sub { font-size: 1rem; color: rgba(245,240,232,0.65); max-width: 420px; margin-bottom: 2.5rem; line-height: 1.7; }
+.btn-primary { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--acento); color: white; padding: 0.9rem 2rem; border-radius: 999px; font-weight: 500; font-size: 0.95rem; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(212,136,74,0.35); }
+.btn-primary:hover { background: var(--cafe-light); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(212,136,74,0.4); }
+.hero-visual { position: relative; display: flex; justify-content: center; }
+.img-placeholder { width: 100%; max-width: 500px; aspect-ratio: 4/5; border-radius: 1.5rem; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.img-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+.badge { position: absolute; bottom: 2rem; left: -1rem; background: var(--cafe); border-radius: 1rem; padding: 1rem 1.4rem; text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+.badge strong { display: block; font-family: var(--font-display); font-size: 1.8rem; color: var(--madera); }
+.badge span { font-size: 0.75rem; color: rgba(245,240,232,0.7); line-height: 1.4; }
+.scroll-hint { display: flex; align-items: center; gap: 1rem; padding: 1.5rem 4rem; position: relative; z-index: 2; }
+.scroll-hint span { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(196,154,108,0.5); }
+.scroll-line { width: 60px; height: 1px; background: rgba(196,154,108,0.3); position: relative; overflow: hidden; }
+.scroll-line::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: var(--madera); animation: slide 2s ease-in-out infinite; }
 @keyframes slide { to { left: 100%; } }
 
-/* RESPONSIVE */
+/* RESPONSIVE HERO */
 @media (max-width: 768px) {
-  .nav { padding: 1.4rem 1.5rem; }
-  .hero-inner {
-    grid-template-columns: 1fr;
-    padding: 1.5rem 1.5rem 3rem;
-    gap: 2rem;
-  }
-  .hero-visual { order: -1; }
-  .hero-img { aspect-ratio: 16/9; max-width: 100%; }
-  .badge { left: 0.5rem; bottom: 1rem; }
-  .scroll-hint { padding: 1rem 1.5rem; }
+  .nav { padding: 1.2rem 1.5rem; }
+  .hero-inner { grid-template-columns: 1fr; padding: 1rem 1.5rem 4rem; gap: 2.5rem; text-align: center; }
+  .hero-visual { order: -1; margin-top: 1rem; width: 100%; }
+  .hero-img { aspect-ratio: 1/1; max-width: 100%; }
+  .hero-sub { margin: 0 auto 2rem; }
+  /* Centramos el badge flotante en celular para que no se corte */
+  .badge { left: 50%; transform: translateX(-50%); bottom: -2rem; width: 85%; }
+  h1 { font-size: 2.4rem; }
+  .scroll-hint { padding: 1rem 1.5rem; justify-content: center; }
 }
 </style>
